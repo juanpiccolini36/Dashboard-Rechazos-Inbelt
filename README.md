@@ -46,20 +46,27 @@ archivo de Rechazos).
 ## Estructura del repo
 
 ```
-actualizar_rechazos.py       -> script principal, corre cada semana
-Actualizar_Rechazos.bat      -> lanzador de doble clic para el script principal
-Reparar_Rechazos_UNA_VEZ.bat -> lanzador para las herramientas de reparación puntual
-herramientas/                -> scripts de uso único (ya aplicados, quedan
-                                 documentados por si hace falta repetir
-                                 el proceso en otro archivo)
+actualizar_rechazos.py           -> script principal, corre cada semana
+Actualizar_Rechazos.bat          -> lanzador de doble clic para el script principal
+Reparar_Rechazos_UNA_VEZ.bat     -> lanzador para las herramientas de reparación puntual
+Tablero desvios_Rev54.html       -> dashboard de análisis (HTML de un solo archivo,
+                                     lee .csv/.xlsx en el navegador, 100% local)
+
+aplicar_formato.py                        -> herramienta de uso único (ya aplicada)
+formato_encabezados.py                    -> herramienta de uso único (ya aplicada)
+formato_centrado.py                       -> herramienta de uso único (ya aplicada)
+formato_anchos_columnas.py                -> herramienta de uso único (ya aplicada)
+corregir_fecha_invertida.py               -> herramienta de uso único (ya aplicada)
+limpiar_duplicados_fecha.py               -> herramienta de uso único (ya aplicada)
+agregar_exclusion_y_formato_fecha.py      -> herramienta de uso único (ya aplicada)
+agregar_dropdown_tipo_falla.py            -> herramienta de uso único (ya aplicada)
 ```
 
-Los scripts de `herramientas/` se usaron para corregir problemas
-puntuales de datos históricos (ver changelog). El script principal
-(`actualizar_rechazos.py`) es autosuficiente para el uso semanal normal
-y ya incorpora todas las correcciones — no hace falta volver a correr
-las herramientas salvo que aparezca un problema similar en datos
-nuevos.
+Los 8 scripts sueltos de arriba se usaron para corregir problemas
+puntuales de datos históricos (ver changelog) y quedan documentados
+acá por si hace falta repetir el proceso en otro archivo — no hace
+falta correrlos de nuevo para el uso semanal normal, que ya está
+cubierto por `actualizar_rechazos.py`.
 
 ## ⚠️ Los archivos `.xlsx` NO se suben a este repo
 
