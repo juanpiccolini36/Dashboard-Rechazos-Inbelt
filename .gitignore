@@ -1,0 +1,16 @@
+# Datos de produccion reales - nunca van al repo
+*.xlsx
+*.xls
+*.csv
+Backups/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Windows / editor
+Thumbs.db
+.DS_Store
+*.tmp
